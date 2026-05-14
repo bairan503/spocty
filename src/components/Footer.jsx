@@ -48,26 +48,26 @@ const Footer = ({ onNavigate }) => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="w-4 h-4" />
-                <span>陕西省西安市长安区沣经大道288号</span>
+                <span>陕西省西安市长安区西长安街558号</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400">
                 <Phone className="w-4 h-4" />
-                <span>+86 29 8888 6666</span>
+                <span>+852 29 8888 6666</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400">
                 <Mail className="w-4 h-4" />
-                <span>contact@qianmohaimian.org</span>
+                <span>contactscty@nvlx.cc</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400">
                 <Clock className="w-4 h-4" />
-                <span>周一至周五 9:00-18:00</span>
+                <span>周一至周五 9:00-18:00 （节假日除外）</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-          <p>© 2026 阡陌海绵 版权所有 | 传承梯田智慧，共建韧性社区</p>
+          <p>© 2026 阡陌海绵 版权所有 | 技术支持：NovaLynx 曜智科创</p>
         </div>
       </div>
     </footer>

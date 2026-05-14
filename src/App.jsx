@@ -17,13 +17,13 @@ function App() {
       case 'home':
         return <Home onNavigate={setCurrentPage} />
       case 'about':
-        return <UnderConstruction pageName="关于我们" onNavigate={setCurrentPage} />
+        return <About pageName="关于我们" onNavigate={setCurrentPage} />
       case 'products':
         return <UnderConstruction pageName="产品展示" onNavigate={setCurrentPage} />
       case 'culture':
         return <Culture onNavigate={setCurrentPage} />
       case 'news':
-        return <UnderConstruction pageName="新闻动态" onNavigate={setCurrentPage} />
+        return <News pageName="新闻动态" onNavigate={setCurrentPage} />
       case 'contact':
         return <Contact onNavigate={setCurrentPage} />
       default:

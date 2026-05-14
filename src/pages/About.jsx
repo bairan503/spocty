@@ -3,10 +3,10 @@ import { History, Users, Award, Target, Leaf, Heart, Globe, Droplets, Shield, Bo
 const About = ({ onNavigate }) => {
   const milestones = [
     { year: '2024', title: '项目启动', description: '阡陌海绵项目正式立项，团队深入研究传统梯田生态智慧' },
-    { year: '2025', title: '政策对接', description: '精准对接西安城市更新试点、老旧小区改造等政府重点工作' },
-    { year: '2025', title: '试点落地', description: '首个公益示范社区落地，打造"共生机簇"核心模块' },
+    { year: '2025', title: '政策对接', description: '精准对接设计西安城市更新试点、老旧小区改造等政府重点工作' },
+    { year: '2025', title: '设计落地', description: '首个公益示范社区设计方案正式推出，打造"共生机簇"核心模块' },
     { year: '2026', title: '模式成型', description: '完成三大核心原型标准化，形成可复制推广的公益方法论' },
-    { year: '2026+', title: '规模扩展', description: '立足西安，辐射关中城市群，打造5-8个公益标杆案例' },
+    { year: '2026+', title: '规模扩展', description: '立足西安，辐射关中城市群，预期打造5-8个公益标杆案例' },
   ]
 
   const prototypes = [
@@ -47,10 +47,11 @@ const About = ({ onNavigate }) => {
 
   return (
     <div className="pt-16">
-      <section className="py-20 bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: `url('/images/aboutheader.jpg')`}}>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 via-emerald-500/85 to-teal-400/80"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold mb-6">关于我们</h1>
+            <h1 className="text-4xl font-bold mb-6 text-gray-300">关于我们</h1>
             <p className="text-xl text-white/80 mb-6">
               阡陌海绵致力于将中华传统生态智慧转化为现代社区解决方案
             </p>
@@ -84,7 +85,7 @@ const About = ({ onNavigate }) => {
             </div>
             <div className="relative">
               <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=terraced%20fields%20traditional%20farming%20ecosystem%20green%20nature%20sustainable%20agriculture&image_size=portrait_4_3"
+                src="/images/aboutian.jpg"
                 alt="梯田生态智慧"
                 className="w-full h-80 object-cover rounded-card shadow-elevated"
               />

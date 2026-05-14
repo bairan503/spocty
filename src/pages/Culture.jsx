@@ -29,11 +29,11 @@ const Culture = ({ onNavigate }) => {
   ]
 
   const policies = [
-    { title: '国务院《关于全面推进城镇老旧小区改造工作的指导意见》', point: '完善类改造、居民参与、长效管理' },
-    { title: '住建部《共同缔造活动指导意见》', point: '"五共"机制，四阶段工作坊完整覆盖' },
-    { title: '国家卫健委《老年友好型社区创建通知》', point: '改善环境、丰富生活、鼓励参与' },
-    { title: '西安2026政府工作报告', point: '改造32个老旧小区、331个城市更新项目' },
-    { title: '西安社区嵌入式服务设施实施方案', point: '一社区一策、功能集成、盘活存量' },
+    { title: '国务院《关于全面推进城镇老旧小区改造工作的指导意见》', point: '完善类改造、居民参与、长效管理',url: 'https://www.gov.cn/zhengce/content/2020-07/20/content_5528320.htm'},
+    { title: '住建部《共同缔造活动指导意见》', point: '"五共"机制，四阶段工作坊完整覆盖',url: 'https://www.gov.cn/zhengce/zhengceku/2019-09/29/content_5434580.htm' },
+    { title: '国家卫健委《老年友好型社区创建通知》', point: '改善环境、丰富生活、鼓励参与',url: 'https://www.gov.cn/zhengce/zhengceku/2020-12/14/content_5569385.htm' },
+    { title: '西安2026政府工作报告', point: '改造32个老旧小区、331个城市更新项目',url: 'https://www.shaanxi.gov.cn/zfxxgk/zfgzbg/sqszfgzbg/202603/t20260306_3617982.html' },
+    { title: '西安社区嵌入式服务设施实施方案', point: '一社区一策、功能集成、盘活存量',url: 'https://www.xa.gov.cn/gk/zcfg/szfbgtwj/1771074568277573633.html' },
   ]
 
   const workshopSteps = [
@@ -61,7 +61,7 @@ const Culture = ({ onNavigate }) => {
       <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400"></div>
         <div className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: `url('/images/mxcultureheader.png')` }}>
+          style={{ backgroundImage: `url('/images/cultureheader.png')` }}>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -94,7 +94,7 @@ const Culture = ({ onNavigate }) => {
             </div>
             <div className="relative">
               <img
-                src="https://neeko-copilot.bytedance.net/api/text2image?prompt=terraced%20fields%20traditional%20farming%20ecosystem%20green%20nature%20sustainable%20agriculture%20water%20management&image_size=portrait_4_3"
+                src="/images/clutretian.jpg"
                 alt="梯田智慧"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
@@ -134,30 +134,39 @@ const Culture = ({ onNavigate }) => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full mb-6">
-              <BookOpen className="w-5 h-5" />
-              <span className="font-medium">政策依据</span>
+     <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <div className="inline-flex items-center space-x-2 bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full mb-6">
+        <BookOpen className="w-5 h-5" />
+        <span className="font-medium">政策依据</span>
+      </div>
+      <h2 className="text-3xl font-bold text-gray-900">国家战略支撑</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {policies.map((policy, index) => (
+        <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-green-50 transition-colors">
+          <div className="flex items-start gap-3">
+            <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+            <div>
+              <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                <a 
+                  href={policy.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-green-600 underline underline-offset-1 transition-colors"
+                >
+                  {policy.title}
+                </a>
+              </h3>
+              <p className="text-gray-600 text-xs">{policy.point}</p>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900">国家战略支撑</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {policies.map((policy, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-green-50 transition-colors">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 text-sm mb-1">{policy.title}</h3>
-                    <p className="text-gray-600 text-xs">{policy.point}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

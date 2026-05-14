@@ -51,8 +51,8 @@ const Home = ({ onNavigate }) => {
     <div className="pt-16">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-500 to-teal-400"></div>
-        <div className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: `url('/images/homeheaderbk.jpg')` }}>
+        <div className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: `url('/images/homeheaderbk.png')` }}>
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="inline-block bg-white/20 backdrop-blur-sm rounded-pill px-4 py-2 mb-6">
@@ -69,7 +69,7 @@ const Home = ({ onNavigate }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => onNavigate('culture')} className="btn-primary inline-flex items-center justify-center space-x-2">
-              <span>深入了解</span>
+              <span>深入项目</span>
               <ArrowRight className="w-5 h-5" />
             </button>
             <button onClick={() => onNavigate('about')} className="btn-secondary">

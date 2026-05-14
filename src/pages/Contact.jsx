@@ -25,9 +25,9 @@ const Contact = ({ onNavigate }) => {
   }
 
   const contactInfo = [
-    { icon: MapPin, label: '地址', value: '陕西省西安市长安区沣经大道288号' },
-    { icon: Phone, label: '电话', value: '+86 29 8888 6666' },
-    { icon: Mail, label: '邮箱', value: 'contact@qianmohaimian.org' },
+    { icon: MapPin, label: '地址', value: '陕西省西安市长安区西长安街558号' },
+    { icon: Phone, label: '电话', value: '+852 29 8888 6666' },
+    { icon: Mail, label: '邮箱', value: 'contactscty@nvlx.cc' },
     { icon: Clock, label: '服务时间', value: '周一至周五 9:00-18:00 节假日除外' },
   ]
 
