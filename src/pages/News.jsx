@@ -15,21 +15,23 @@ const News = ({ onNavigate }) => {
   const news = [
     {
       id: 1,
-      title: '阡陌海绵入选西安市城市更新公益示范项目',
-      excerpt: '经西安市住建局评审，阡陌海绵项目正式纳入城市更新公益示范项目库，将获得专项政策支持',
-      date: '2026-05-10',
+      title: '阡陌海绵首例设计方案出炉',
+      excerpt: '经团队专业设计，阡陌海绵项目正式纳入城市更新公益示范项目库，将获得专项政策支持',
+      date: '2025-09-10',
       tag: 'project',
-      image: 'urban%20renewal%20community%20renovation%20sponge%20city%20demonstration',
+      image: '/images/news1.png',
       views: 1567,
+      url: 'badgateway',
     },
     {
       id: 2,
-      title: '郭杜小镇获评陕西省老年友好社区示范点',
-      excerpt: '继获评西安市示范点后，郭杜小镇再获省级认可，成为全省老旧小区改造的标杆案例',
-      date: '2026-04-28',
-      tag: 'project',
-      image: 'elderly%20friendly%20community%20award%20demonstration%20green%20award',
+      title: '2026年西安32个老旧小区将迎来"新生"',
+      excerpt: '除了争取各级财政资金支持，西安也鼓励原产权单位、居民和社会资本参与。',
+      date: '2026-03-10',
+      tag: 'media',
+      image: '/images/news2.png',
       views: 2345,
+      url: 'https://www.jiemian.com/article/14091771.html',
     },
     {
       id: 3,
@@ -37,35 +39,39 @@ const News = ({ onNavigate }) => {
       excerpt: '《梯田智慧社区转译白皮书V2.0》发布，详解四阶段参与式公益工作坊操作指南',
       date: '2026-04-15',
       tag: 'policy',
-      image: 'community%20workshop%20methodology%20whitepaper%20publication',
+      image: '/images/news3.png',
       views: 1890,
+      url: 'badgateway',
     },
     {
       id: 4,
-      title: '央视新闻专题报道阡陌海绵社区改造经验',
-      excerpt: '央视《新闻联播》播出阡陌海绵社区改造成果，向全国推广社区共治新模式',
-      date: '2026-03-20',
+      title: '焦点访谈｜破局老旧小区改造 多地在“拆”与“建”平衡中书写民生答卷',
+      excerpt: '央视网消息（焦点访谈）：老旧小区改造，尤其是非成套住宅的改造，是城市绕不开的民生“必答题”，关系千家万户。这些“超龄服役”的老小区，大多存在着管线老化、结构隐患等问题，困扰居民的还有没有独立的厨房、卫生间，缺少公共空间等等生活痛点。小修小补、简单翻新解决不了根本问题，大规模改造又由于标',
+      date: '2025-08-19',
       tag: 'media',
-      image: 'cctv%20news%20sponge%20city%20community%20renovation%20tv%20coverage',
+      image: '/images/news4.jpg',
       views: 8976,
+      url: 'https://news.cctv.com/2025/08/19/ARTIx2DjMDXbbiqYKcdXuQ1Q250819.shtml',
     },
     {
       id: 5,
-      title: '碑林区友谊小区改造经验分享',
-      excerpt: '首批改造完成的友谊小区迎来第50批考察团，居民志愿者分享共建心得',
-      date: '2026-03-10',
+      title: '民生一件事丨老旧小区改造加速：从焕新颜到优服务 创新管理模式提升居民幸福感',
+      excerpt: '央视网消息：把老百姓关心的事一件一件办好，民生一件事，继续聚焦老旧小区改造。记者近日从住房城乡建设部获悉，今年以来，各地不断加快城镇老旧小区改造步伐，多个省份开工率超过50%。',
+      date: '2025-07-07',
       tag: 'community',
-      image: 'community%20garden%20volunteers%20elderly%20activity%20sharing%20session',
+      image: '/images/news5.jpg',
       views: 1234,
+      url: 'https://news.cctv.cn/2025/07/07/ARTI5ra5bNyVe9Qv3Jfn6dZl250707.shtml',
     },
     {
       id: 6,
-      title: '住建部调研组肯定阡陌海绵模式',
+      title: '住建部：2000年以前建成的老旧小区纳入城市更新改造范围',
       excerpt: '住建部老旧小区改造调研组实地考察，对"文化转译+社区参与"模式给予高度评价',
-      date: '2026-02-25',
+      date: '2025-03-09',
       tag: 'policy',
-      image: 'government%20inspection%20community%20renovation%20sponge%20city%20survey',
+      image: '/images/news6.png',
       views: 3456,
+      url: 'https://www.guancha.cn/politics/2025_03_09_767797.shtml',
     },
   ]
 
@@ -104,43 +110,53 @@ const News = ({ onNavigate }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredNews.map((item) => (
-              <div key={item.id} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={`https://neeko-copilot.bytedance.net/api/text2image?prompt=${item.image}&image_size=landscape_4_3`}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm">
-                      {tags.find(t => t.id === item.tag)?.name}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-gray-400 text-sm mb-3">
-                    <span className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{item.date}</span>
-                    </span>
-                    <span className="flex items-center space-x-1">
-                      <Eye className="w-4 h-4" />
-                      <span>{item.views}</span>
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.excerpt}</p>
-                  <button className="flex items-center space-x-2 text-green-600 font-medium hover:text-green-700 transition-colors">
-                    <span>阅读全文</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+  {filteredNews.map((item) => (
+    <button
+      key={item.id}
+      onClick={() => {
+        if (item.url === 'badgateway') {
+          onNavigate('badgateway')
+        } else {
+          window.open(item.url, '_blank', 'noopener,noreferrer')
+        }
+      }}
+      className="block w-full bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group text-left"
+    >
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={item.image.startsWith('/') ? item.image : `https://neeko-copilot.bytedance.net/api/text2image?prompt=${item.image}&image_size=landscape_4_3`}
+          alt={item.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute top-4 left-4">
+          <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm">
+            {tags.find(t => t.id === item.tag)?.name}
+          </span>
+        </div>
+      </div>
+      <div className="p-6">
+        <div className="flex items-center space-x-4 text-gray-400 text-sm mb-3">
+          <span className="flex items-center space-x-1">
+            <Calendar className="w-4 h-4" />
+            <span>{item.date}</span>
+          </span>
+          <span className="flex items-center space-x-1">
+            <Eye className="w-4 h-4" />
+            <span>{item.views}</span>
+          </span>
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.excerpt}</p>
+        <div className="flex items-center space-x-2 text-green-600 font-medium">
+          <span>阅读全文</span>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </div>
+      </div>
+    </button>
+  ))}
+</div>
 
           {filteredNews.length === 0 && (
             <div className="text-center py-12">

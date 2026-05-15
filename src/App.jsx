@@ -8,6 +8,7 @@ import Culture from './pages/Culture'
 import News from './pages/News'
 import Contact from './pages/Contact'
 import UnderConstruction from './pages/UnderConstruction'
+import BadGateway from './pages/BadGateway'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -26,6 +27,8 @@ function App() {
         return <News pageName="新闻动态" onNavigate={setCurrentPage} />
       case 'contact':
         return <Contact onNavigate={setCurrentPage} />
+      case 'badgateway':
+        return <BadGateway pageName="页面维护中" onNavigate={setCurrentPage} />
       default:
         return <Home onNavigate={setCurrentPage} />
     }
